@@ -1,0 +1,59 @@
+{
+  "judul": "Laptop tidak bisa internet lewat WiFi",
+  "batas": "Pengetahuan dalam sistem ini hanya berasal dari dua halaman bantuan IT universitas (S1 dan S2) dan dipakai untuk menduga penyebab umum laptop yang tidak bisa internet lewat WiFi berdasarkan gejala yang dijawab pengguna. Langkah yang disarankan berlaku umum untuk laptop Windows atau macOS di rumah atau kampus; hal yang khusus jaringan tertentu (misalnya akun kampus) tidak dicakup penuh. Hasilnya hanya saran awal, bukan keputusan akhir; bila masalah berlanjut, hubungi bagian IT atau penyedia internet (provider).",
+  "sumber": {
+    "S1": "Wireless - Connecting to UWL-Eagle WiFi - Troubleshooting Techniques. University of Wisconsin-La Crosse (UWL) Knowledge Base, diperbarui 26 Februari 2026.",
+    "S2": "How to Troubleshoot Network Connectivity Issues. Vanderbilt University IT (VUIT) Knowledge Base, diterbitkan Oktober 2024, diubah Februari 2025."
+  },
+  "aturan": [
+    {
+      "id": "R1", "mode": "dan",
+      "jika": ["HP atau perangkat lain juga tidak bisa internet lewat WiFi yang sama"],
+      "maka": "masalah ada di modem/router atau provider, bukan di laptop",
+      "sumber": ["S2"],
+      "catatan": "S2: cek apakah perangkat lain di area itu bisa tersambung; bila tidak ada satu pun yang bisa internet, kemungkinan gangguan ada di provider."
+    },
+    {
+      "id": "R2", "mode": "atau",
+      "jika": ["mode pesawat (Airplane Mode) di laptop menyala", "alamat IP laptop kosong atau berbentuk 169.254.x.x (hasil perintah ipconfig)"],
+      "maka": "laptop tidak mendapat koneksi WiFi yang valid",
+      "sumber": ["S1", "S2"],
+      "catatan": "S1: mode pesawat tidak mengizinkan koneksi internet. S2: IP kosong atau 169.254.x.x berarti tidak ada koneksi yang valid."
+    },
+    {
+      "id": "R3", "mode": "dan",
+      "jika": ["masalah ada di modem/router atau provider, bukan di laptop"],
+      "maka": "restart modem dan router (cabut 30 detik lalu pasang lagi); bila tetap, hubungi provider",
+      "sumber": ["S2"],
+      "catatan": "S2: matikan modem dan router dengan mencabutnya sekitar 30 detik, tunggu menyala penuh, lalu sambungkan lagi; bila tidak ada perangkat yang bisa internet, hubungi provider."
+    },
+    {
+      "id": "R4", "mode": "dan",
+      "jika": ["mode pesawat (Airplane Mode) di laptop menyala"],
+      "maka": "matikan mode pesawat, lalu matikan dan nyalakan lagi WiFi",
+      "sumber": ["S1"],
+      "catatan": "S1: pastikan mode pesawat mati, dan coba matikan lalu nyalakan lagi WiFi."
+    },
+    {
+      "id": "R5", "mode": "dan",
+      "jika": ["muncul pesan password salah saat menyambung WiFi"],
+      "maka": "hapus (forget) jaringan WiFi lalu sambungkan ulang dengan password yang benar",
+      "sumber": ["S1", "S2"],
+      "catatan": "S1: lupakan jaringan lalu sambungkan lagi; password salah/kedaluwarsa perlu direset. S2: masukkan ulang password WiFi bila diminta."
+    },
+    {
+      "id": "R6", "mode": "dan",
+      "jika": ["laptop tidak mendapat koneksi WiFi yang valid", "driver WiFi laptop sudah lama tidak diperbarui"],
+      "maka": "perbarui driver WiFi di Device Manager lalu restart laptop",
+      "sumber": ["S1", "S2"],
+      "catatan": "S1: pasang update dan pastikan driver jaringan terbaru. S2: Device Manager > Network adapters > Update driver."
+    },
+    {
+      "id": "R7", "mode": "atau",
+      "jika": ["sinyal WiFi lemah (laptop jauh dari router)", "ada microwave atau telepon nirkabel di dekat router"],
+      "maka": "dekatkan laptop ke router atau jauhkan router dari microwave/telepon nirkabel",
+      "sumber": ["S2"],
+      "catatan": "S2: dekati router bila sinyal lemah; microwave dan telepon nirkabel dapat mengganggu sinyal."
+    }
+  ]
+}
