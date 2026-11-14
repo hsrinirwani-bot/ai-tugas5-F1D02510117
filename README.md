@@ -65,4 +65,4 @@ Urutan pertanyaan: (1) perangkat lain juga tidak bisa internet, (2) mode pesawat
 Pengetahuan dalam sistem ini hanya berasal dari dua halaman bantuan IT universitas (S1 dan S2) dan dipakai untuk menduga penyebab umum laptop yang tidak bisa internet lewat WiFi berdasarkan gejala yang dijawab pengguna. Langkah yang disarankan berlaku umum untuk laptop Windows atau macOS di rumah atau kampus; hal yang khusus jaringan tertentu (misalnya akun kampus) tidak dicakup penuh. Hasilnya hanya saran awal, bukan keputusan akhir; bila masalah berlanjut, hubungi bagian IT atau penyedia internet (provider). Paragraf ini juga ditampilkan oleh program.
 
 ## 7. Penggunaan Alat Bantu AI
-**[EDIT SESUAI KENYATAAN]** Saya memakai Claude (Anthropic) untuk membantu mencari sumber, menyusun aturan, dan menulis kode serta draf README. Saya sudah membaca kedua sumber, menjalankan program, dan memahami kode serta aturannya.
+Saya memakai Claude (Anthropic) untuk membantu mencari sumber, menyusun aturan, dan menulis kode serta draf README. Saya sudah membaca kedua sumber, menjalankan program, dan memahami kode serta aturannya.
